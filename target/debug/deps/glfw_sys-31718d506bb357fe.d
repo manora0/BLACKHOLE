@@ -1,0 +1,9 @@
+C:\Users\nororism\projects\home\h.RsProjects\BLACKHOLES\target\debug\deps\glfw_sys-31718d506bb357fe.d: C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\lib.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\sys\manual.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\sys\pregenerated.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\../README.md C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\../glfw/include/GLFW/glfw3.h
+
+C:\Users\nororism\projects\home\h.RsProjects\BLACKHOLES\target\debug\deps\libglfw_sys-31718d506bb357fe.rmeta: C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\lib.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\sys\manual.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\sys\pregenerated.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\../README.md C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\../glfw/include/GLFW/glfw3.h
+
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\lib.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\sys\manual.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\sys\pregenerated.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\../README.md:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\glfw-sys-7.0.0\src\../glfw/include/GLFW/glfw3.h:

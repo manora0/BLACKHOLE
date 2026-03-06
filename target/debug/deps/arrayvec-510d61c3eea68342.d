@@ -1,0 +1,11 @@
+C:\Users\nororism\projects\home\h.RsProjects\BLACKHOLES\target\debug\deps\arrayvec-510d61c3eea68342.d: C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\lib.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\arrayvec_impl.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\arrayvec.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\array_string.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\char.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\errors.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\utils.rs
+
+C:\Users\nororism\projects\home\h.RsProjects\BLACKHOLES\target\debug\deps\libarrayvec-510d61c3eea68342.rmeta: C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\lib.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\arrayvec_impl.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\arrayvec.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\array_string.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\char.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\errors.rs C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\utils.rs
+
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\lib.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\arrayvec_impl.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\arrayvec.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\array_string.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\char.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\errors.rs:
+C:\Users\nororism\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\arrayvec-0.7.6\src\utils.rs:

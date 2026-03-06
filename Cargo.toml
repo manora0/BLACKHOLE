@@ -1,0 +1,8 @@
+[package]
+name = "blackholes"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+glfw = "*"
+gl = "0.6.0"
