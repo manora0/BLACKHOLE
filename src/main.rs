@@ -4,6 +4,7 @@ use glfw::{Action, Context, Glfw, GlfwReceiver, Key, PWindow, WindowEvent};
 use glow::{HasContext, MAX_WIDTH};
 use core::panic;
 use std::f32::consts::PI;
+use glam::{vec2, vec3, vec4};
 
 
 struct Engine {
@@ -12,29 +13,48 @@ struct Engine {
     events: GlfwReceiver<(f64, WindowEvent)>,
     gl: glow::Context,
 
+    quad_vao: glow::NativeVertexArray,  // Vertex Array Object for the quad that fills the screen
+    texture: Option<glow::NativeTexture>,
     shader_program: glow::NativeProgram,
+    compute_program: Option<glow::NativeProgram>,
 
-    vao: glow::NativeVertexArray,
-    vbo: glow::NativeBuffer,
+    // UBOS -- buffer objects that hold the parameters for these objects
+    camera_ubo: glow::NativeBuffer,
+    disk_ubo: glow::NativeBuffer,
+    objects_ubo: glow::NativeBuffer,
 
-    height: i32,
-    width: i32,
+    // grid mess vars
+    grid_vao: glow::NativeVertexArray,
+    grid_vbo: glow::NativeBuffer,
+    grid_ebo: glow::NativeBuffer,
+    
+    // // framebuffer
+    // framebuffer: Option<glow::NativeFramebuffer>,
+
+    // //uniforms
+    // u_time: Option<glow::UniformLocation>,
+    // u_resolution: Option<glow::UniformLocation>,
+
+    height: u32 = 800,
+    width: u32 = 600,
 }
  // ctrl + alt to enable inlay hints
 impl Engine {
 
     fn new(height:i32, width:i32) -> Self {
         use glfw::fail_on_errors;
-
+        
+        // Load glfw
         let mut glfw = glfw::init(fail_on_errors!()).unwrap();
 
+        // Create Window
         let (mut window, events) = glfw
         .create_window(640, 480, "engine test", glfw::WindowMode::Windowed)
         .expect("failed to create window");
-
         window.make_current();
         window.set_key_polling(true);
         
+        // initialize glow 
         let gl = 
         unsafe {
             glow::Context::from_loader_function(|s| 
@@ -43,6 +63,7 @@ impl Engine {
                 .unwrap_or(std::ptr::null()))
         };
 
+        // Check OpenGL Version
         unsafe {
             println!(
                 "OpenGL version: {}",
@@ -50,6 +71,7 @@ impl Engine {
             );
         }
 
+        // Create Shader Program
         let shader_program = unsafe {
             let vertex_shader = gl.create_shader(glow::VERTEX_SHADER).unwrap();
             gl.shader_source(vertex_shader, r#"
@@ -97,8 +119,32 @@ impl Engine {
             program
         };
 
-        let (vao, vbo) = unsafe {
-            let quadVerticies [32f:]
+        
+        let camera_ubo = unsafe {
+            let camera_ubo = gl.create_buffer().expect("failed to create camera_ubo");
+            gl.bind_buffer(glow::UNIFORM_BUFFER, Some(camera_ubo));
+            gl.buffer_data_size(glow::UNIFORM_BUFFER, 128, glow::DYNAMIC_DRAW);
+            gl.bind_buffer_base(glow::UNIFORM_BUFFER, 1, Some(camera_ubo));
+
+            camera_ubo
+        };
+
+        let disk_ubo = unsafe {
+            let disk_ubo = gl.create_buffer().expect("failed to create disk_ubo");
+            gl.bind_buffer(glow::UNIFORM_BUFFER, Some(disk_ubo));
+            gl.buffer_data_size(glow::UNIFORM_BUFFER, (size_of::<f32>() * 4) as i32, glow::DYNAMIC_DRAW);
+            gl.bind_buffer_base(glow::UNIFORM_BUFFER, 2, Some(disk_ubo));
+            disk_ubo
+        };
+
+        let objects_ubo = unsafe {
+            let objects_ubo = gl.create_buffer().expect("failed to create objects_ubo");
+            gl.bind_buffer(glow::UNIFORM_BUFFER, Some(objects_ubo));
+            // allocate space for 16 objects
+            // sizeof int + padding + 16 x (vec4 posRadius + Vec4 color)
+            obj_size = size_of::<i32>() + 3 * size_of::<f32>()
+                + 16 * (size_of::<Vec4>() + size_of::<Vec4>())
+                + 16 * size_of::<f32>();
         }
 
         Engine {
